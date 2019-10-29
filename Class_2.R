@@ -10,7 +10,7 @@ mine_sweeper()
 library(sudoku)
 playSudoku()
 
-# Cheer up Briean!
+# Cheer up Brian!
 devtools::install_github("gaborcsardi/praise")
 library(praise)
 praise()
