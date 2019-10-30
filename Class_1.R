@@ -1,11 +1,13 @@
-# Class 1 COD com sofia
+# Class 1
+
+
 
 library(raster)
 
 
-# Load boundaries and information about specific place
+# Load boundaries and information about specific place in this case Germany
 germany <- getData("GADM", country="DEU", level=2)
-# Plot loaded information (boundaies)
+# Then you can plot previously loaded data (boundaies)
 plot(germany)
 #Load precipitation information
 prec<- getData("worldclim", var="prec", res=.5, lon=10, lat=51)
@@ -22,7 +24,7 @@ spplot(prec_ger2)
 prec_avg_mean <- cellStats(prec_ger2, stat="mean")
 plot(prec_avg_mean)
 
-#################################################################################### SAMPLE COLOMBIA
+# SAMPLE COLOMBIA
 
 colombia <- getData("GADM", country="COL", level=2)
 plot(colombia)
@@ -35,5 +37,5 @@ spplot(prec_col2, col.regions=topo.colors(2000))
 prec_col_tst <- (prec_col2)/1200
 spplot(prec_col_tst, col=colorRampPalette(c("blue", "red"))(10))
 
-#################################################################################### SAMPLE GUATEMALA
+# SAMPLE GUATEMALA
 ## PORFA SOFIA AGREGA ACA EL CÓDIGO PARA CARGAR LOS DATOS DEL CLIMA DE GUATEMALA!
