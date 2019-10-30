@@ -37,3 +37,9 @@ spplot(prec_col_tst, col=colorRampPalette(c("blue", "red"))(10))
 
 #################################################################################### SAMPLE GUATEMALA
 ## PORFA SOFIA AGREGA ACA EL CÓDIGO PARA CARGAR LOS DATOS DEL CLIMA DE GUATEMALA!
+
+guatemala <- getData("GADM", country="GTM", level=2)
+plot(guatemala)
+
+#LISTO
+#######################################################################################
