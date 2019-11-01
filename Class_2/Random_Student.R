@@ -1,3 +1,4 @@
+library(ggplot2)
 ##############################################################################################
 list <- c(
   "Marius",
@@ -12,7 +13,9 @@ list <- c(
   "Helena", 
   "Narges", 
   "Antonio",
-  "Niels")
+  "Niels",
+  "Kevin",
+  "Chris")
 
 Random_Student <- function(number) {
   if(number > length(list)){
@@ -29,5 +32,9 @@ acumulate <- vector(mode='character', length=100)
 for (var in 1:100) {
   acumulate[var] <- Random_Student(1)
 }
-library(ggplot2)
-qplot(acumulate)
+
+Histo <- data.frame(acumulate)
+qplot(Histo$acumulate,
+      xlab = "sudents",
+      main = "Histogram for # of Calls")
+
