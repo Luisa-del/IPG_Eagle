@@ -1,10 +1,5 @@
-# Class 1
-
-
-
+####################### Class 1 #######################
 library(raster)
-
-
 # Load boundaries and information about specific place in this case Germany
 germany <- getData("GADM", country="DEU", level=2)
 # Then you can plot previously loaded data (boundaies)
@@ -27,26 +22,13 @@ plot(prec_avg_mean)
 # SAMPLE COLOMBIA
 
 colombia <- getData("GADM", country="COL", level=2)
-plot(colombia)
 prec_col<- getData("worldclim", var="prec", res=2.5, lon=4, lat=-74)
-plot(prec_col)
 prec_col1 <- crop(prec_col,colombia)
 prec_col2 <- mask(prec_col1,colombia)
 spplot(prec_col2, col.regions=topo.colors(2000))
 
-prec_col_tst <- (prec_col2)/1200
-spplot(prec_col_tst, col=colorRampPalette(c("blue", "red"))(10))
-
-<<<<<<< HEAD
 # SAMPLE GUATEMALA
-## PORFA SOFIA AGREGA ACA EL CÓDIGO PARA CARGAR LOS DATOS DEL CLIMA DE GUATEMALA!
-=======
-#################################################################################### SAMPLE GUATEMALA
-## PORFA SOFIA AGREGA ACA EL CÓDIGO PARA CARGAR LOS DATOS DEL CLIMA DE GUATEMALA!
 
 guatemala <- getData("GADM", country="GTM", level=2)
 plot(guatemala)
 
-#LISTO
-#######################################################################################
->>>>>>> 5bc77cca9a6b2caa431f84bf673eee43e60cb327

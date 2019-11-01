@@ -29,12 +29,5 @@ acumulate <- vector(mode='character', length=100)
 for (var in 1:100) {
   acumulate[var] <- Random_Student(1)
 }
-require(ggplot2)
+library(ggplot2)
 qplot(acumulate)
-
-a <- table(acumulate)
-total <- 0
-for (var in 1:length(list)) {
-  total = total + a[names(a)==list[var]]
-  print(a[names(a)==list[var]])
-}
