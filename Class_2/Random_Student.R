@@ -15,7 +15,10 @@ list <- c(
   "Antonio",
   "Niels",
   "Kevin",
-  "Chris")
+  "Chris",
+  "Luisa",
+  "Sanaz",
+  "Walid")
 
 Random_Student <- function(number) {
   if(number > length(list)){
@@ -36,5 +39,6 @@ for (var in 1:100) {
 Histo <- data.frame(acumulate)
 qplot(Histo$acumulate,
       xlab = "sudents",
+      ylab = "Calls",
       main = "Histogram for # of Calls")
 
