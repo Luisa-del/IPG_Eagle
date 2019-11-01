@@ -1,4 +1,4 @@
-[logo]: http://eagle-science.org/wp-content/uploads/2016/05/EAGLE_mini_w_UW_logo_r.png
+![Logo]: http://eagle-science.org/wp-content/uploads/2016/05/EAGLE_mini_w_UW_logo_r.png
 
 # IPG_Eagle
 Basic Codes for Introduction to Programming and Geostatistics course. 
