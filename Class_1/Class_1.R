@@ -127,13 +127,18 @@ Table_Datapasta <- data.frame(stringsAsFactors=FALSE,
 )
 
 #--> Load xslx Table from google drive
+#--> Get gsheet package
+#install.packages('gsheet')
+#--> Load gsheet package
+library(gsheet)
+#--> Get url for document
+Google_URL <- "https://docs.google.com/spreadsheets/d/1VRLmwNxIXQIYJgqGh3lQ053txgaAWJpmCxhL7ygFPIY/edit?usp=sharing"
 
+#--> Download Table
+Tabledrive <- gsheet2tbl(Google_URL)
 
-
-
-
-
-
+#--> Check Table
+summary(Tabledrive)
 
 
 
