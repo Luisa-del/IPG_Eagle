@@ -87,58 +87,7 @@ lines(prec_avg_month, prec_avg_mean,
 
 #SEE MORE: http://www.nickeubank.com/wp-content/uploads/2015/10/RGIS3_MakingMaps_part1_mappingVectorData.html#a-final-note-on-ggplot
 
-#######################################################
-####################### TABLES ########################
-#######################################################
-#--> Load xlsx, datapasta and googledrive library
-library(xlsx)
-library(datapasta)
-library(googledrive)
 
-#--> Get and modify Working Directory (optional)
-# Get
-getwd()
-
-# Set, use tab to autocomplete directions
-setwd("D:/EAGLE/I_SEMESTER/Introdution_to_Progrmming_and_Geostatistics/IPG_Eagle/Tempral_Data/")
-
-#--> Load Table from csv giving the path
-Tablecsv <- read.csv("D:/EAGLE/I_SEMESTER/Introdution_to_Progrmming_and_Geostatistics/IPG_Eagle/Tempral_Data/Table.csv",
-  header = T,
-  sep=";")
-
-#--> Get summary of data csv
-summary(Tablecsv)
-
-#--> Load xslx Table
-Tablexls <- read.xlsx("Table.xlsx", 1, header=TRUE)
-
-#--> Get summary of data csv
-summary(Tablexls)
-
-#--> Paste table using DATAPASTA
-
-Table_Datapasta <- data.frame(stringsAsFactors=FALSE,
-     MUESTRA = c("IT-103", "IT-102", "IT-101", "IT-100"),
-           H = c(464.9, 461.7, 460.4, 457.2),
-       Al2O3 = c(26.646, 30.341, 28.778, 27.692),
-        SiO2 = c(64.073, 59.257, 62.192, 63.034),
-        P2O5 = c(0.25, 0.227, 0.234, 0.259)
-)
-
-#--> Load xslx Table from google drive
-#--> Get gsheet package
-#install.packages('gsheet')
-#--> Load gsheet package
-library(gsheet)
-#--> Get url for document
-Google_URL <- "https://docs.google.com/spreadsheets/d/1VRLmwNxIXQIYJgqGh3lQ053txgaAWJpmCxhL7ygFPIY/edit?usp=sharing"
-
-#--> Download Table
-Tabledrive <- gsheet2tbl(Google_URL)
-
-#--> Check Table
-summary(Tabledrive)
 
 
 
